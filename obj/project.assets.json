@@ -7288,11 +7288,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\2daw3\\dev\\SERV\\apis\\Eroski\\Eroski.csproj",
-      "projectName": "Eroski",
-      "projectPath": "C:\\Users\\2daw3\\dev\\SERV\\apis\\Eroski\\Eroski.csproj",
+      "projectUniqueName": "C:\\Users\\2daw3\\proyecto\\Api\\Tiempo.csproj",
+      "projectName": "Tiempo",
+      "projectPath": "C:\\Users\\2daw3\\proyecto\\Api\\Tiempo.csproj",
       "packagesPath": "C:\\Users\\2daw3\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\2daw3\\dev\\SERV\\apis\\Eroski\\obj\\",
+      "outputPath": "C:\\Users\\2daw3\\proyecto\\Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\2daw3\\AppData\\Roaming\\NuGet\\NuGet.Config",

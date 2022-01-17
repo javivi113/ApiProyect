@@ -12,9 +12,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
-using Eroski.Models;
+using Tiempo.Models;
 
-namespace Eroski
+namespace Tiempo
 {
     public class Startup
     {
@@ -30,11 +30,11 @@ namespace Eroski
         {
 
             services.AddControllers();
-            services.AddDbContext<EroskiContext>(options =>
-                                            options.UseSqlServer(Configuration.GetConnectionString("eroski")));
+            services.AddDbContext<TiempoContext>(options =>
+                                            options.UseSqlServer(Configuration.GetConnectionString("Tiempo")));
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Eroski", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Tiempo", Version = "v1" });
             });
         }
 
@@ -45,7 +45,7 @@ namespace Eroski
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Eroski v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Tiempo v1"));
             }
 
             app.UseHttpsRedirection();
