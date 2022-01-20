@@ -30,7 +30,7 @@ namespace Tiempo.Controllers
 
         // GET: api/Tiempo/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Tiempo>> GetTiempo(string id)
+        public async Task<ActionResult<Tiempo>> GetTiempoItem(string id)
         {
             var tiempo = await _context.Tiempo.FindAsync(id);
 
@@ -41,35 +41,9 @@ namespace Tiempo.Controllers
 
             return tiempo;
         }
-
-
-        // POST: api/Tiempo
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<Tiempo>> PostTiempo(Tiempo tiempo)
-        {
-            _context.Tiempo.Add(tiempo);
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateException)
-            {
-                if (TiempoExists(tiempo.id))
-                {
-                    return Conflict();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return CreatedAtAction("GetTiempo", new { id = tiempo.id }, tiempo);
-        }
         private bool TiempoExists(string id)
         {
-            return _context.Tiempo.Any(e => e.id == id);
+            return _context.Tiempo.Any(e => e.Municipio == id);
         }
     }
 }

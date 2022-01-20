@@ -8,7 +8,6 @@ namespace Tiempo.Models
             : base(options)
         {
         }
-
         public DbSet<Tiempo> Tiempo { get; set; }
     }
 }

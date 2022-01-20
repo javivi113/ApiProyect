@@ -9,7 +9,7 @@ using Tiempo.Models;
 namespace Tiempo.Migrations
 {
     [DbContext(typeof(TiempoContext))]
-    [Migration("20220117102640_InitialCreate")]
+    [Migration("20220119080123_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -22,37 +22,37 @@ namespace Tiempo.Migrations
 
             modelBuilder.Entity("Tiempo.Tiempo", b =>
                 {
-                    b.Property<string>("id")
+                    b.Property<string>("Municipio")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<decimal>("GpxX")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<decimal>("GpxY")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<int>("Humedad")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Municipio")
+                    b.Property<string>("DescripcionTiempo")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Nombre")
+                    b.Property<string>("GpxX")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Precipitaciones")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Provincia")
+                    b.Property<string>("GpxY")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Temperatura")
-                        .HasColumnType("int");
+                    b.Property<string>("PathImg")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("VelViento")
-                        .HasColumnType("int");
+                    b.Property<string>("Precipitaciones")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("id");
+                    b.Property<string>("Region")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Temperatura")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("VelocidadViento")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ultimaHora")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Municipio");
 
                     b.ToTable("Tiempo");
                 });
